@@ -15,6 +15,7 @@ circleci
 coreutils
 docutils
 emacs
+enpass-cli
 fontconfig
 freetype
 gdbm
