@@ -9,7 +9,7 @@ fi
 if command -v brew >/dev/null 2>&1; then
     brew update
 else
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Test if brew file exists before ln command
