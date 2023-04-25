@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Add Homebrew executable to path if it doesn't exist
-if ! grep -qxF 'export PATH="/usr/local/bin:$PATH"' ~/.bash_profile; then
-    echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile
+if ! grep -qxF 'export PATH="/usr/local/bin:$PATH"' ~/.zshrc; then
+    echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
 fi
 
 # Update Homebrew if it's already installed, otherwise install it
