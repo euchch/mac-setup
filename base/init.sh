@@ -1,10 +1,5 @@
 #!/bin/zsh
 
-# Add Homebrew executable to path if it doesn't exist
-if ! grep -qxF 'export PATH="/usr/local/bin:$PATH"' ~/.zshrc; then
-    echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
-fi
-
 # Update Homebrew if it's already installed, otherwise install it
 if command -v brew >/dev/null 2>&1; then
     brew update
@@ -18,7 +13,13 @@ if [ ! -f "/opt/homebrew/bin/brew" ]; then
     exit 1
 fi
 
-sudo ln -s /opt/homebrew/bin/brew /usr/local/bin/
+# Add Homebrew executable to path if it doesn't exist
+if ! grep -qxF 'export PATH="/opt/homebrew/bin:$PATH"' ~/.zshrc; then
+    echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
+fi
+
+# Fixing homebrew permissions (it happens sometimes - it's always good to run it)
+sudo chown -R $(whoami) $(brew --prefix)/*
 
 # Install brew formulas
 brew install --formula $(cat brew-formulas.list) --quiet
