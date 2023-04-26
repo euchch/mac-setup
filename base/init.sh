@@ -28,4 +28,7 @@ brew install --formula $(cat brew-formulas.list) --quiet
 brew install --cask $(cat brew-cask-formulas.list) --quiet
 
 # Install Visual Studio Code extensions
-cat vscode-plugins.list | xargs -n 1 code --force --install-extension
+cat vscode-plugins.list | xargs -n 1 -I{} code --force --install-extension={}
+
+./init-golang.sh
+./init-git.sh
