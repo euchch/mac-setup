@@ -115,6 +115,7 @@ pixman
 pkcs11-helper
 pkg-config
 pre-commit
+protobuf
 pycparser
 pyenv
 python
