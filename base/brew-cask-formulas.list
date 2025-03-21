@@ -4,10 +4,15 @@ docker
 gimp
 google-cloud-sdk
 grammarly
+macrorecorder
 microsoft-edge
+microsoft-teams
 obs
+openvpn-connect
 opera
 parsec
+pgadmin4
+postman
 powershell
 sketch
 slack
@@ -17,3 +22,5 @@ visual-studio-code
 vivaldi
 vlc
 wezterm
+xemu
+zoom
